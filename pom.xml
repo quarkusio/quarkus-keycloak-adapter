@@ -37,11 +37,17 @@
     </modules>
 
     <properties>
-
         <quarkus-http.version>3.0.0.Alpha1-SNAPSHOT</quarkus-http.version>
         <keycloak.version>6.0.1</keycloak.version>
         <junit.version>4.12</junit.version>
     </properties>
+
+    <scm>
+        <connection>scm:git:git@github.com:quarkusio/quarkus-keycloak-adapter.git</connection>
+        <developerConnection>scm:git:git@github.com:quarkusio/quarkus-keycloak-adapter.git</developerConnection>
+        <url>https://github.com/quarkusio/quarkus-keycloak-adapter</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
