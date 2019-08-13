@@ -26,10 +26,16 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.quarkus.keycloak</groupId>
-    <artifactId>quarkus-keycloak-adapter</artifactId>
+    <artifactId>quarkus-keycloak-parent</artifactId>
     <version>1.0.0.Alpha1-SNAPSHOT</version>
-    <name>Quarkus Keycloak Integration</name>
+    <name>Quarkus Keycloak Parent</name>
+    <packaging>pom</packaging>
     <description/>
+
+    <modules>
+        <module>adapter</module>
+        <module>spi</module>
+    </modules>
 
     <properties>
 
@@ -38,45 +44,52 @@
         <junit.version>4.12</junit.version>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-core</artifactId>
-            <version>${keycloak.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-adapter-spi</artifactId>
-            <version>${keycloak.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-undertow-adapter-spi</artifactId>
-            <version>${keycloak.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-adapter-core</artifactId>
-            <version>${keycloak.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus.http</groupId>
-            <artifactId>quarkus-http-servlet</artifactId>
-            <scope>provided</scope>
-            <version>${quarkus-http.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.quarkus.http</groupId>
-            <artifactId>quarkus-http-core</artifactId>
-            <scope>provided</scope>
-            <version>${quarkus-http.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-            <version>${junit.version}</version>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-core</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-adapter-spi</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-common</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus.keycloak</groupId>
+                <artifactId>quarkus-keycloak-adapter-spi</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-adapter-core</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus.http</groupId>
+                <artifactId>quarkus-http-servlet</artifactId>
+                <scope>provided</scope>
+                <version>${quarkus-http.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.quarkus.http</groupId>
+                <artifactId>quarkus-http-core</artifactId>
+                <scope>provided</scope>
+                <version>${quarkus-http.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <scope>test</scope>
+                <version>${junit.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
