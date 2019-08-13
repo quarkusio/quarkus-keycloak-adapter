@@ -26,11 +26,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.quarkus.keycloak</groupId>
-    <artifactId>quarkus-keycloak-parent</artifactId>
+    <artifactId>quarkus-keycloak-adapter-parent</artifactId>
     <version>1.0.0.Alpha1-SNAPSHOT</version>
-    <name>Quarkus Keycloak Parent</name>
+    <name>Quarkus Keycloak Adapter Parent</name>
     <packaging>pom</packaging>
-    <description/>
 
     <modules>
         <module>adapter</module>
