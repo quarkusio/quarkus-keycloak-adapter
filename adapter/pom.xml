@@ -30,13 +30,6 @@
     <name>Quarkus Keycloak Integration</name>
     <description/>
 
-    <properties>
-
-        <quarkus-http.version>3.0.0.Alpha1-SNAPSHOT</quarkus-http.version>
-        <keycloak.version>6.0.1</keycloak.version>
-        <junit.version>4.12</junit.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.keycloak</groupId>
